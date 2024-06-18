@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    background-color: #000;
+    color: yellow;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+  }
+  
+  .crawler-container {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    height: 100%;
+    perspective: 400px;
+    overflow: hidden;
+  }
+  
+  .crawler {
+    position: absolute;
+    width: 90%;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) rotateX(20deg);
+    animation: crawl 60s linear infinite;
+  }
+  
+  .crawler p {
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.5;
+    white-space: pre-wrap;
+  }
+  
+  @keyframes crawl {
+    0% {
+      top: 100%;
+      transform: translateX(-50%) rotateX(20deg) translateZ(0);
+    }
+    100% {
+      top: -150%;
+      transform: translateX(-50%) rotateX(20deg) translateZ(-500px);
+    }
+  }
+  
+  
+  
+  

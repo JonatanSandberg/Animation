@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+.clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 10px solid black;
+    border-radius: 50%;
+    background-color: blue;
+}
+
+.hand {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition-timing-function: steps(60);
+}
+
+.second-hand {
+    height: 3px;
+    background: red;
+    animation: spin 60s linear infinite;
+}
+
+.minute-hand {
+    height: 6px;
+    background: yellow;
+    animation: spin 3600s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(90deg);
+    }
+    to {
+        transform: rotate(450deg);
+    }
+}

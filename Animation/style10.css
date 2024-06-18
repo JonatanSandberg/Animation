@@ -1,0 +1,147 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+}
+
+.wave {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    perspective: 800px;
+    transform-style: preserve-3d;
+    animation: spin 20s linear infinite;
+}
+
+.ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    animation: wave 2s ease-in-out infinite alternate;
+}
+
+/* Different colors for each ring */
+.ring:nth-child(1) {
+    background-color: #ff5733; /* Orange */
+    transform: rotate(0deg) translateX(150px) rotateY(0deg);
+}
+
+.ring:nth-child(2) {
+    background-color: #33ff57; /* Green */
+    transform: rotate(18deg) translateX(150px) rotateY(0deg);
+}
+
+.ring:nth-child(3) {
+    background-color: #5733ff; /* Purple */
+    transform: rotate(36deg) translateX(150px) rotateY(0deg);
+}
+
+.ring:nth-child(4) {
+    background-color: #ff3357; /* Pink */
+    transform: rotate(54deg) translateX(150px) rotateY(0deg);
+}
+
+.ring:nth-child(5) {
+    background-color: #33a1ff; /* Blue */
+    transform: rotate(72deg) translateX(150px) rotateY(0deg);
+}
+
+.ring:nth-child(6) {
+    background-color: #ffd133; /* Yellow */
+    transform: rotate(90deg) translateX(150px) rotateY(0deg);
+}
+
+.ring:nth-child(7) {
+    background-color: #33ffd1; /* Cyan */
+    transform: rotate(108deg) translateX(150px) rotateY(0deg);
+}
+
+.ring:nth-child(8) {
+    background-color: #ff5733; /* Orange */
+    transform: rotate(126deg) translateX(150px) rotateY(0deg);
+}
+
+.ring:nth-child(9) {
+    background-color: #33ff57; /* Green */
+    transform: rotate(144deg) translateX(150px) rotateY(0deg);
+}
+
+.ring:nth-child(10) {
+    background-color: #5733ff; /* Purple */
+    transform: rotate(162deg) translateX(150px) rotateY(0deg);
+}
+
+.ring:nth-child(11) {
+    background-color: #ff3357; /* Pink */
+    transform: rotate(180deg) translateX(150px) rotateY(0deg);
+}
+
+.ring:nth-child(12) {
+    background-color: #33a1ff; /* Blue */
+    transform: rotate(198deg) translateX(150px) rotateY(0deg);
+}
+
+.ring:nth-child(13) {
+    background-color: #ffd133; /* Yellow */
+    transform: rotate(216deg) translateX(150px) rotateY(0deg);
+}
+
+.ring:nth-child(14) {
+    background-color: #33ffd1; /* Cyan */
+    transform: rotate(234deg) translateX(150px) rotateY(0deg);
+}
+
+.ring:nth-child(15) {
+    background-color: #ff5733; /* Orange */
+    transform: rotate(252deg) translateX(150px) rotateY(0deg);
+}
+
+.ring:nth-child(16) {
+    background-color: #33ff57; /* Green */
+    transform: rotate(270deg) translateX(150px) rotateY(0deg);
+}
+
+.ring:nth-child(17) {
+    background-color: #5733ff; /* Purple */
+    transform: rotate(288deg) translateX(150px) rotateY(0deg);
+}
+
+.ring:nth-child(18) {
+    background-color: #ff3357; /* Pink */
+    transform: rotate(306deg) translateX(150px) rotateY(0deg);
+}
+
+.ring:nth-child(19) {
+    background-color: #33a1ff; /* Blue */
+    transform: rotate(324deg) translateX(150px) rotateY(0deg);
+}
+
+.ring:nth-child(20) {
+    background-color: #ffd133; /* Yellow */
+    transform: rotate(342deg) translateX(150px) rotateY(0deg);
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0) rotateY(0) rotateX(0);
+    }
+    50% {
+        transform: translateY(-150px) rotateY(180deg) rotateX(180deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    100% {
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+}

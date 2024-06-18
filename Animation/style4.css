@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+    overflow: hidden;
+}
+
+.deck {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    background-color: #3e0a6a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: transform 0.5s, left 0.5s, top 0.5s;
+    transform-origin: bottom center;
+}
+
+body:hover .card {
+    transform: rotate(calc(var(--i) * 10deg)) translateY(-50%);
+}
+
+.card:nth-child(1) { --i: -4; background-color: #FF0000; }
+.card:nth-child(2) { --i: -3; background-color: #FF8C00; }
+.card:nth-child(3) { --i: -2; background-color: #FFFF00; }
+.card:nth-child(4) { --i: -1; background-color: #008000; }
+.card:nth-child(5) { --i: 0; background-color: #0000FF; }
+.card:nth-child(6) { --i: 1; background-color: #8B00FF; }
+.card:nth-child(7) { --i: 2; background-color: #FF69B4; }
+.card:nth-child(8) { --i: 3; background-color: #800080; }
+.card:nth-child(9) { --i: 4; background-color: #00CED1; }
